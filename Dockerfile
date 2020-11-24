@@ -5,9 +5,9 @@ ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
 
-#./gradlew build && java -jar build/libs/gs-spring-boot-docker-0.1.0.jar
+#./gradlew build && java -jar build/libs/pay.jar
 #docker build --build-arg JAR_FILE=build/libs/*.jar -t ngtech/pay .
 
 
-#./mvnw package && java -jar target/gs-spring-boot-docker-0.1.0.jar
+#./mvnw package && java -jar target/pay.jar
 #docker build -t ngtech/pay .
