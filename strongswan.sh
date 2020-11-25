@@ -55,7 +55,9 @@ conn ngtech-to-APS
 EOF
 
 sudo iptables -t nat -A POSTROUTING -s APS_Private_Subnet/24 -d 10.116.0.2/32 -j MASQUERADE
-sudo systemctl enable strongswan
+sudo systemctl enable ipsec.service
+sudo systemctl start ipsec.service
+sudo systemctl status ipsec.service
 
 #sudo ipsec up ngtech-to-APS
 #sudo ipsec down ngtech-to-APS
